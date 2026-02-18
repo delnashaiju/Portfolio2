@@ -1,0 +1,140 @@
+/* ================= HERO SECTION ================= */
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 10%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #0f172a;
+  color: white;
+}
+
+/* ================= CANVAS ================= */
+
+#neural-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* ================= TEXT ================= */
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #00d4ff, #6c63ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.sub-head {
+  font-size: 1.4rem;
+  color: #00d4ff;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-bottom: 30px;
+}
+
+/* ================= BUTTONS ================= */
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background: linear-gradient(90deg, #00d4ff, #6c63ff);
+  border: none;
+  color: white;
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 212, 255, 0.4);
+}
+
+.secondary-btn {
+  border: 1px solid #00d4ff;
+  color: #00d4ff;
+  background: transparent;
+}
+
+.secondary-btn:hover {
+  background: #00d4ff;
+  color: #0f172a;
+  transform: translateY(-4px);
+}
+
+/* ================= IMAGE ================= */
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-image img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #00d4ff;
+  box-shadow:
+    0 0 40px rgba(0, 212, 255, 0.6),
+    0 0 80px rgba(108, 99, 255, 0.3);
+  transition: all 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 60px rgba(0, 212, 255, 0.9),
+    0 0 120px rgba(108, 99, 255, 0.6);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    margin-top: 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+}

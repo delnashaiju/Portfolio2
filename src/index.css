@@ -1,0 +1,71 @@
+/* ===== GLOBAL RESET ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background: radial-gradient(circle at top,#111827,#020617 70%);
+  color:white;
+  overflow-x:hidden;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  width:600px;
+  height:600px;
+  top:-150px;
+  left:-150px;
+  background:radial-gradient(circle,#06b6d4,transparent 60%);
+  filter:blur(120px);
+  opacity:.25;
+  animation:moveBlob1 18s infinite alternate ease-in-out;
+  z-index:-1;
+}
+
+body::after{
+  content:"";
+  position:fixed;
+  width:500px;
+  height:500px;
+  bottom:-120px;
+  right:-120px;
+  background:radial-gradient(circle,#6366f1,transparent 60%);
+  filter:blur(120px);
+  opacity:.25;
+  animation:moveBlob2 20s infinite alternate ease-in-out;
+  z-index:-1;
+}
+
+@keyframes moveBlob1{
+  from{transform:translate(0,0)}
+  to{transform:translate(120px,80px)}
+}
+
+@keyframes moveBlob2{
+  from{transform:translate(0,0)}
+  to{transform:translate(-100px,-60px)}
+}
+body {
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
